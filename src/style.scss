@@ -47,3 +47,8 @@ body {
 .text-shadow {
   text-shadow: 2px 1px 0px #809c82;
 }
+
+.wedding-card {
+  background-color: rgba($color: #74abd3, $alpha: 0.7);
+  padding: calc(0.15rem + 0.15vw);
+}
