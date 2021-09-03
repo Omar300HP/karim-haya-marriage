@@ -1,6 +1,7 @@
 applications:
   - name: karim-haya-marriage
+memory: 64M
 path: build/
-buildpack: staticfile_buildpack
+buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
 routes:
   - route: karim-haya-marriage.eu-gb.cf.appdomain.cloud
