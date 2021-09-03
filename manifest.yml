@@ -1,0 +1,6 @@
+applications:
+  - name: karim-haya-marriage
+path: build/
+buildpack: staticfile_buildpack
+routes:
+  - route: karim-haya-marriage.eu-gb.cf.appdomain.cloud
