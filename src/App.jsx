@@ -70,24 +70,24 @@ function App() {
               </h3>
             </Col>
 
-//             {timeTillWedding.days && (
-//               <Col xs={12} md={6}>
-//                 <Card className="wedding-card">
-//                   <Row className="justify-content-center">
-//                     <CounterCell value={timeTillWedding.days} title="Days" />
-//                     <CounterCell value={timeTillWedding.hours} title="Hours" />
-//                     <CounterCell
-//                       value={timeTillWedding.minutes}
-//                       title="Minutes"
-//                     />
-//                     <CounterCell
-//                       value={timeTillWedding.seconds}
-//                       title="Seconds"
-//                     />
-//                   </Row>
-//                 </Card>
-//               </Col>
-//             )}
+            {/* {timeTillWedding.days && (
+              <Col xs={12} md={6}>
+                <Card className="wedding-card">
+                  <Row className="justify-content-center">
+                    <CounterCell value={timeTillWedding.days} title="Days" />
+                    <CounterCell value={timeTillWedding.hours} title="Hours" />
+                    <CounterCell
+                      value={timeTillWedding.minutes}
+                      title="Minutes"
+                    />
+                    <CounterCell
+                      value={timeTillWedding.seconds}
+                      title="Seconds"
+                    />
+                  </Row>
+                </Card>
+              </Col>
+            )} */}
           </Row>
         </Container>
       </div>
