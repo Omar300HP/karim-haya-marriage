@@ -25,18 +25,18 @@ function CounterCell({ title, value }) {
 
 function App() {
   const [timeNow, setTimeNow] = useState(new Date());
-  const [timeTillWedding, setTimeTillWedding] = useState({});
+  const [timeSinceWedding, setTimeSinceWedding] = useState({});
 
   useEffect(() => {
     let timeInterval = setTimeout(() => {
       let dateNow = new Date();
 
       let duration = intervalToDuration({
-        start: dateNow,
-        end: MARRIAGE_DATE,
+        start: MARRIAGE_DATE,
+        end: dateNow,
       });
 
-      setTimeTillWedding(duration);
+      setTimeSinceWedding(duration);
       setTimeNow(dateNow);
     }, 1000);
     return () => {
@@ -70,24 +70,36 @@ function App() {
               </h3>
             </Col>
 
-            {/* {timeTillWedding.days && (
+            {timeSinceWedding.days && (
               <Col xs={12} md={6}>
                 <Card className="wedding-card">
                   <Row className="justify-content-center">
-                    <CounterCell value={timeTillWedding.days} title="Days" />
-                    <CounterCell value={timeTillWedding.hours} title="Hours" />
+                    {timeSinceWedding.years ? (
+                      <CounterCell
+                        value={timeSinceWedding.years}
+                        title="Years"
+                      />
+                    ) : (
+                      ""
+                    )}
                     <CounterCell
-                      value={timeTillWedding.minutes}
+                      value={timeSinceWedding.months}
+                      title="Months"
+                    />
+                    <CounterCell value={timeSinceWedding.days} title="Days" />
+                    <CounterCell value={timeSinceWedding.hours} title="Hours" />
+                    <CounterCell
+                      value={timeSinceWedding.minutes}
                       title="Minutes"
                     />
                     <CounterCell
-                      value={timeTillWedding.seconds}
+                      value={timeSinceWedding.seconds}
                       title="Seconds"
                     />
                   </Row>
                 </Card>
               </Col>
-            )} */}
+            )}
           </Row>
         </Container>
       </div>
